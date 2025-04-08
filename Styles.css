@@ -1,0 +1,56 @@
+h1 {  
+    color: rgb(44, 44, 44);  
+    font-size: 8em;  
+    font-weight: bold;
+    align-items: center;
+    justify-content: center; /* This centers it horizontally */
+    gap: 10px;
+    ;  
+}  
+
+/* Universal Selector for Font Family */  
+* {  
+    font-family: Poppins, sans-serif;  
+    color: #10b98f; /* Default color for all elements */  
+}  
+
+/* Ensure aside shows correctly on hover */  
+aside:hover {  
+    display: block; /* Restore display on hover */  
+}  
+
+/* Menu paragraphs displayed inline */  
+.menu {  
+    display: inline-block; /* Align menu items horizontally */  
+}  
+
+/* Remove bullet points from the navigation list */  
+nav ul {  
+    list-style: none; /* No bullets for list items */  
+}  
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo and text */
+  }
+  
+  .logo {
+    width: 60px;
+    height: auto;
+  }
+
+  nav a {  
+    text-decoration: none;  
+    padding: 0.2em 0.6em;  
+    border: 4px solid #0d889e8e;  
+} 
+  
+/* Style for header */  
+header {  
+    border: 1px solid rgb(0, 0, 0); /* Black border */  
+    margin: 0.5em; /* Margin around the header */  
+    padding: 0.5em; /* Padding inside the header */  
+    background-color: lightgray; /* Light gray background */  
+    text-align: center; /* Center text in header */  
+}  
