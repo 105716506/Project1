@@ -1,56 +1,114 @@
-h1 {  
-    color: rgb(44, 44, 44);  
-    font-size: 8em;  
-    font-weight: bold;
-    align-items: center;
-    justify-content: center; /* This centers it horizontally */
-    gap: 10px;
-    ;  
-}  
-
-/* Universal Selector for Font Family */  
-* {  
-    font-family: Poppins, sans-serif;  
-    color: #10b98f; /* Default color for all elements */  
-}  
-
-/* Ensure aside shows correctly on hover */  
-aside:hover {  
-    display: block; /* Restore display on hover */  
-}  
-
-/* Menu paragraphs displayed inline */  
-.menu {  
-    display: inline-block; /* Align menu items horizontally */  
-}  
-
-/* Remove bullet points from the navigation list */  
-nav ul {  
-    list-style: none; /* No bullets for list items */  
-}  
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* space between logo and text */
+/* Universal Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
   }
   
+  /* BODY STYLES */
+  body {
+    background-image: url("./Images/body_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #192753;
+    text-align: center;
+    line-height: 1.6;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  /* HEADER STYLES */
+  header {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+    padding: 1em 0.5em;
+    background-image: url("./Images/Header_bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0; /* fallback color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer {  
+    border-top: 4px double #192753; /* Bold black double border on top */  
+    padding: 2em;
+    clear: both; /* Make sure footer is below floated elements */  
+    } 
+
+  section {
+    margin: 5em 0;   /* Adds vertical space above and below each section */
+    padding: 1em;     /* Optional: adds inner spacing inside section */
+  }
+
   .logo {
-    width: 60px;
+    width: 70px;
     height: auto;
   }
-
-  nav a {  
-    text-decoration: none;  
-    padding: 0.2em 0.6em;  
-    border: 4px solid #0d889e8e;  
-} 
   
-/* Style for header */  
-header {  
-    border: 1px solid rgb(0, 0, 0); /* Black border */  
-    margin: 0.5em; /* Margin around the header */  
-    padding: 0.5em; /* Padding inside the header */  
-    background-color: lightgray; /* Light gray background */  
-    text-align: center; /* Center text in header */  
-}  
+  h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  /* NAVIGATION STYLES */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    margin-top: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    text-decoration: none;
+    padding: 0.4em 1em;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 105px;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }
+  
+  /* ASIDE HOVER FIX */
+  aside:hover {
+    display: block;
+  }
+  
+  /* MENU (If you’re using .menu class for other stuff) */
+  .menu {
+    display: inline-block;
+  }
+  
+  /* Responsive Media Queries (Optional) */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 1em;
+    }
+  
+    .logo-container {
+      flex-direction: column;
+      gap: 0.5em;
+    }
+
+   
+  }
+  
