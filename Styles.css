@@ -37,6 +37,17 @@
     justify-content: space-between;
   }
 
+  Dev {  
+    border: 4px inset purple; /* Purple border */
+    border-radius: 14px; /* Rounded corners */    
+    margin: 1em; /* Margin around the aside */  
+    padding: 1em; /* Padding inside the aside */
+    width: 30%; /* Width of the aside */  
+    background: url(images/fade.jpg) repeat-x top left;   
+    float: right; /* Float to the right of the page */  
+    box-shadow: 10px 10px 5px #aaaaaa; /* Subtle shadow effect */   
+    }  
+
   footer {  
     border-top: 4px double #192753; /* Bold black double border on top */  
     padding: 2em;
