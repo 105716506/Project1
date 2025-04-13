@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="About our group at QuantumTech" />
   <title>QuantumTech | About</title>
-  <link href="Styles.css" rel="stylesheet">
+
+  <!-- External stylesheet link -->
+  <link href="Styles.css" rel="stylesheet" />
+
+  <!-- Internal styles for table formatting -->
   <style>
     table {
       border-collapse: collapse;
@@ -27,10 +31,40 @@
       margin-bottom: 10px;
       font-weight: bold;
     }
+
+    /* Basic nav and layout styling */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    figure {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Navigation Menu -->
   <header>
     <nav>
       <p class="menu"><a href="index.html">Home</a></p>
@@ -42,42 +76,51 @@
   </header>
 
   <main>
+    <!-- Main heading for the page -->
     <h1>About Our Team</h1>
+
+    <!-- Section for basic group details -->
     <section>
       <h2>Team Details</h2>
       <ul>
         <li>Group Name: Quantum Creators</li>
-        <li>Class Time: Thu - 12.30 to 2.30</li>
+        <li>Class Time: Thursday, 12:30 PM – 2:30 PM</li>
         <li>Tutor: Mr. Rahul Raghavan</li>
         <li>Student IDs:
           <ul class="student-ids">
-            <li>Linuka Pulmeth Jayawardhana (Project Maneger & container) - 105713057</li>
-            <li>Ramiru Hewavithana (Lead Developer) - 105716506</li>
-            <li>Ibrahim Mohamed Irshad (Content & Documentation) - 105929854</li>
+            <li>Linuka Pulmeth Jayawardhana (Project Manager & Container) – 105713057</li>
+            <li>Ramiru Hewavithana (Lead Developer) – 105716506</li>
+            <li>Ibrahim Mohamed Irshad (Content & Documentation) – 105929854</li>
           </ul>
         </li>
       </ul>
     </section>
 
+    <!-- Section for each team member's contribution -->
     <section>
       <h2>Contributions</h2>
       <dl>
         <dt>Linuka Jayawardhana</dt>
-        <dd>Developed jobs.html, about.html and email button</dd>
+        <dd>Developed <code>jobs.html</code>, <code>about.html</code>, and the email button.</dd>
+
         <dt>Ramiru Hewavithana</dt>
-        <dd>Designed the home page and styles.css</dd>
+        <dd>Designed the home page and <code>styles.css</code>.</dd>
+
         <dt>Ibrahim Mohamed Irshad</dt>
-        <dd>Coded the Apply.html and Jira Project management</dd>
+        <dd>Coded <code>apply.html</code> and managed the Jira project.</dd>
       </dl>
     </section>
 
+    <!-- Section with a team photo -->
     <section>
       <figure>
-        <img src="/Users/linukajayawardhana/Documents/GitHub/Project1/Images/Profile pic.jpeg" alt="Our Group Photo" width="800" length="800" />
-        <figcaption>QuantumTech Team - Semester 1, 2025</figcaption>
+        <!-- Local image path - should be changed if deployed online -->
+        <img src="Images/Profile pic.jpeg" alt="QuantumTech team photo" width="800" height="800" />
+        <figcaption>QuantumTech Team – Semester 1, 2025</figcaption>
       </figure>
     </section>
 
+    <!-- Table showing programming and hobbies of team members -->
     <section>
       <h2>Group Interests</h2>
       <table>
@@ -110,9 +153,10 @@
     </section>
   </main>
 
+  <!-- Footer section with contact and project link -->
   <footer>
     <p>Contact us at <a href="mailto:info@quantumtech.com.au">info@quantumtech.com.au</a></p>
-    <p><a href="https://your-jira-link.com">Jira Project Link</a></p>
+    <p><a href="https://your-jira-link.com" target="_blank">Jira Project Link</a></p>
   </footer>
 </body>
 </html>
