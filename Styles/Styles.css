@@ -58,18 +58,18 @@
     } 
 
   .Cloud-Engineer {
-    border: 4px inset rgb(214, 30, 30); /* border color */
-    background-color: rgb(250, 115, 115); /* bg color */
+    border: 4px inset rgb(166, 189, 253); /* border color */
+    background-color: rgb(115, 178, 250); /* bg color */
   }
 
   .DevOps-Engineer {
-    border: 4px inset rgb(82, 48, 48); /* border color */
-    background-color: rgb(160, 182, 62); /* bg color */
+    border: 4px inset rgb(166, 189, 253); /* border color */
+    background-color: rgb(115, 178, 250); /* bg color */
   }
 
   .SR-Engineer {
-    border: 4px inset rgb(122, 58, 226); /* border color */
-    background-color: rgb(40, 0, 44); /* bg color */
+    border: 4px inset rgb(166, 189, 253); /* border color */
+    background-color: rgb(115, 178, 250); /* bg color */
   }
   
 /* Footer styling*/
