@@ -11,17 +11,8 @@
 </head>
 
 <body>
-  <!-- Navigation menu with links to different pages -->
-  <header>
-    <nav>
-        <p class="menu"><a href="index.html">Home</a></p> 
-		<p class="menu"><a href="jobs.html">Jobs</a> </p> 
-		<p class="menu"><a href="apply.html">Apply</a></p> 
-		<p class="menu"><a href="about.html">About</a></p> 
-        <p class="menu"><a href="mailto:info@quantumtech.com.au">Email Us</a></p>
-    </nav>
-  </header>
-
+<!--php include of the header -->
+<?php include 'header.inc'; ?>
 
 <body>
   <!-- Page title and subtitle -->
