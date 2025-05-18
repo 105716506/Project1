@@ -122,12 +122,9 @@
   </form>
   <!-- Page footer -->
 
-  <footer>
-    <!-- Contact Email -->
-    <p>Contact us at <a href="mailto:info@quantumtech.com.au">info@quantumtech.com.au</a></p>
-    <!-- Jira Project Link -->
-    <p><a href="https://ibrahimmohamedirshadulhaq.atlassian.net/jira/software/projects/CWC/boards/34?selectedIssue=CWC-9&sprintStarted=true&atlOrigin=eyJpIjoiOWZlM2QwM2UzNDA1NGJjNzg4ZWRhYzE4NTFmODFhYzMiLCJwIjoiaiJ9">Jira Project Link</a></p>
-  </footer>
+<!--php include of the footer -->
+<?php include 'footer.inc'; ?>
+
 </body>
 
 </html>

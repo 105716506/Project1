@@ -162,10 +162,8 @@
     </aside>
   </main>
 
-  <!-- Footer section with contact info and external links -->
-  <footer>
-    <p>Contact us at <a href="mailto:info@quantumtech.com.au">info@quantumtech.com.au</a></p>
-    <p><a href="https://ibrahimmohamedirshadulhaq.atlassian.net/jira/software/projects/CWC/boards/34?atlOrigin=eyJpIjoiN2VmNjBlMTZhNmE2NDdiZjkwZjNhN2RjODQxMDQ0MzgiLCJwIjoiaiJ9" target="_blank">Jira Project Link</a></p>
-  </footer>
+<!--php include of the footer -->
+<?php include 'footer.inc'; ?>
+
 </body>
 </html>
