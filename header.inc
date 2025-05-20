@@ -2,8 +2,6 @@
  <!-- Navigation Menu -->
  
 <header>
-    <nav> 
-
-    </nav>
+    <?php include 'nav.inc'; ?>
     <img src="Styles_Images/Header_bg.png" class="logo" alt="QuantumTech Logo" />
 </header>
