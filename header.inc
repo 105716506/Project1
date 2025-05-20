@@ -1,8 +1,8 @@
  <!--header section of the web site-->
  <!-- Navigation Menu -->
  
-  <header>
-    <nav>
-
+<header>
+    <nav> 
+    
     </nav>
-  </header>
+</header>
