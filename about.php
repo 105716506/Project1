@@ -11,88 +11,92 @@
 </head>
 
 <body>
-<!--php include of the header -->
 <?php include 'header.inc'; ?>
 
-  <main>
-    <!-- Main heading for the page -->
-    <h1>About Our Team</h1>
+<main>
+  <h1>About Our Team</h1>
 
-    <!-- Section for basic group details -->
-    <section>
-      <h2>Team Details</h2>
-      <ul>
-        <li>Group Name: Quantum Creators</li>
-        <li>Class Time: Thursday, 12:30 PM – 2:30 PM</li>
-        <li>Tutor: Mr. Rahul Raghavan</li>
-        <li>Student IDs:
-          <ul class="student-ids">
-            <li>Linuka Pulmeth Jayawardhana (Project Manager & Container) – 105713057</li>
-            <li>Ramiru Hewavithana (Lead Developer) – 105716506</li>
-            <li>Ibrahim Mohamed Irshad (Content & Documentation) – 105929854</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+  <section>
+    <h2>Team Details</h2>
+    <ul>
+      <li>Group Name: Quantum Creators</li>
+      <li>Class Time: Thursday, 12:30 PM – 2:30 PM</li>
+      <li>Tutor: Mr. Rahul Raghavan</li>
+      <li>Student IDs:
+        <ul class="student-ids">
+          <li>Linuka Pulmeth Jayawardhana (Project Manager & Container) – 105713057</li>
+          <li>Ramiru Hewavithana (Lead Developer) – 105716506</li>
+          <li>Ibrahim Mohamed Irshad (Content & Documentation) – 105929854</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
 
-    <!-- Section for each team member's contribution -->
-    <section>
-      <h2>Contributions</h2>
-      <dl>
-        <dt>Linuka Jayawardhana</dt>
-        <dd>Developed <code>jobs.html</code>, <code>about.html</code>, and the email button.</dd>
+  <section>
+    <h2>Contributions</h2>
+    <dl>
+      <dt><strong>Linuka Pulmeth Jayawardhana</strong></dt>
+      <dd>
+        <p>Led the development of server-side form processing by creating <code>process_eoi.php</code> which validates and adds expression of interest (EOI) records into the database.</p>
+        <p>Implemented robust server-side validation, sanitization of user input, and dynamic table creation to ensure data integrity and security.</p>
+        <p>Updated <code>about.php</code> to reflect team contributions, and developed dynamic job descriptions by creating and populating the <code>jobs</code> table in the database and dynamically generating HTML content in <code>jobs.php</code>.</p>
+      </dd>
 
-        <dt>Ramiru Hewavithana</dt>
-        <dd>Designed the home page and <code>styles.css</code>.</dd>
+      <dt><strong>Ramiru Hewavithana</strong></dt>
+      <dd>
+        <p>Modularised the website by creating reusable components such as headers, footers, and navigation menus with PHP include files (<code>.inc</code>), improving maintainability and consistency.</p>
+        <p>Developed the database connection file <code>settings.php</code> for secure and centralized management of database credentials.</p>
+        <p>Designed and created the <code>eoi</code> table structure in MySQL to store applicant data with appropriate fields and status management.</p>
+      </dd>
 
-        <dt>Ibrahim Mohamed Irshad</dt>
-        <dd>Coded <code>apply.html</code> and managed the Jira project.</dd>
-      </dl>
-    </section>
+      <dt><strong>Ibrahim Mohamed Irshad</strong></dt>
+      <dd>
+        <p>Developed the HR management interface <code>manage.php</code> to enable querying, updating, deleting, and sorting of EOI records, providing essential administrative controls.</p>
+        <p>Implemented additional enhancements including user registration with server-side validation, login security, and access control mechanisms to protect sensitive pages.</p>
+        <p>Handled project documentation and coordinated content updates to ensure quality and clarity throughout the website.</p>
+      </dd>
+    </dl>
+  </section>
 
-    <!-- Section with a team photo -->
-    <section>
-      <figure>
-        <!-- Local image path - should be changed if deployed online -->
-        <img src="Images/Profile pic.jpeg" alt="QuantumTech team photo" width="800" height="800" />
-        <figcaption>QuantumTech Team – Semester 1, 2025</figcaption>
-      </figure>
-    </section>
+  <section>
+    <figure>
+      <img src="Images/Profile pic.jpeg" alt="QuantumTech team photo" width="800" height="800" />
+      <figcaption>QuantumTech Team – Semester 1, 2025</figcaption>
+    </figure>
+  </section>
 
-    <!-- Table showing programming and hobbies of team members -->
-    <section>
-      <h2>Our Team</h2>
-      <table>
-        <caption>Our Interests</caption>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Programming Languages</th>
-            <th>Hobbies</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Linuka</td>
-            <td>HTML, CSS, JS</td>
-            <td>Music, Chess</td>
-          </tr>
-          <tr>
-            <td>Ramiru</td>
-            <td>Python, SQL</td>
-            <td>Gaming, Cycling</td>
-          </tr>
-          <tr>
-            <td>Ibrahim</td>
-            <td>Java, PHP</td>
-            <td>Photography, Reading</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
+  <section>
+    <h2>Our Team</h2>
+    <table>
+      <caption>Our Interests</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Programming Languages</th>
+          <th>Hobbies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Linuka</td>
+          <td>HTML, CSS, JavaScript</td>
+          <td>Music, Chess</td>
+        </tr>
+        <tr>
+          <td>Ramiru</td>
+          <td>Python, SQL</td>
+          <td>Gaming, Cycling</td>
+        </tr>
+        <tr>
+          <td>Ibrahim</td>
+          <td>Java, PHP</td>
+          <td>Photography, Reading</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
 
-<!--php include of the footer -->
 <?php include 'footer.inc'; ?>
 
 </body>
