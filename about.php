@@ -9,6 +9,7 @@
 <body>
 
 <?php include 'header.inc'; ?>
+<?php include 'nav.inc'; ?>
 
 <main>
   <h1 style="text-align:center; font-size:2.5rem; color:#0a0036; margin-bottom:2rem;">About Our Team</h1>
