@@ -1,130 +1,99 @@
-<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
-<html> 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <!-- Metadata section: Contains page info, styling references, etc. -->
-  <meta charset="UTF-8"> <!-- Character encoding for the document -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design support -->
-  <meta name="keywords" content="HTML5, CSS layout, QuantumTech, Technology, Future, Website" />
-  <meta name="description" content="Welcome to QuantumTech - Innovating the Future">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>QuantumTech | Apply</title>
-  <link href="Styles/Styles.css" rel="stylesheet"> <!-- References to external CSS files -->
+  <link href="Styles/Styles.css" rel="stylesheet" />
 </head>
-
 <body>
-<!--php include of the header -->
+
 <?php include 'header.inc'; ?>
 
-<body>
-  <!-- Page title and subtitle -->
-  <h1 style= "text-align: center;">QuantumTech</h1>
-  <h2 style= "text-align: center;">Application Form</h2>
-
-   <!-- Start of application form -->
-  <!-- Form sends data to the Swinburne server when submitted -->
-  <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-    <fieldset>
-      
-    <!-- Job ref selection field -->
-      <label for="JobReferenceNo">Job Reference Code</label>
-      <select id="JobReferenceNo" name="Job Reference Number" required>
-        <option value="">Please Select a Job Reference Code</option>  
-                <option value="JobReferenceNo1">JobRefernce01</option>  
-                <option value="JobReferenceNo2">JobRefernce02</option>  
-                <option value="JobReferenceNo3">JobRefernce03</option>  
-      </select>  
-    </fieldset>
-
-    <fieldset>
-       <!-- Personal Information section -->
-      <legend>Personal Info</legend>
-        <!-- First Name Input -->
-      <label for="firstname">First Name:</label>
-      <input type="text" id="firstname" name="First Name" required maxlength="20" pattern="[A-Za-z]+" placeholder="Enter Your First Name">
-      <!-- Last Name Input -->
-      <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="Last Name" required maxlength="20" pattern="[A-Za-z]+" placeholder="Enter Your Last Name">
-      
-       <!-- Date of Birth Input -->
-      <label for="DateOfBirth">Date Of Birth (dd/mm/yyyy):</label>
-      <input type="text" id="DateOfBirth" name="Date Of birth" required pattern="\d{2}/\d{2}/\d{4}" placeholder="DD/MM/YYYY">
-      
-      <!-- Gender Selection using radio buttons -->
-      <label>Gender:</label>
-      <input type="radio" id="Male" name="Gender" value="Male" required>
-      <label for="Male">Male</label>
-      <input type="radio" id="female" name="Gender" value="Female" required>
-      <label for="female">Female</label>
-      <input type="radio" id="other" name="Gender" value="Other" required>
-      <label for="other">Other</label>
-      <input type="radio" id="NPTA" name="Gender" value="Not Perferred to Answer" required>
-      <label for="NPTA">Not Perferred to Answer</label>
-    </fieldset>
-    <!-- Residential Information section -->
-    <fieldset>
-      <legend>Residential Info</legend>
-      <!-- Street Address -->
-      <label for="StreetName">Street Address</label>
-      <input type="text" id="StreetName" name="Street Address" required maxlength="40"  placeholder="Enter Street Name">
-     
-      <!-- Town or Suburb -->
-      <label for="Town/Sub">Town/Suburb</label>
-      <input type="text" id="Town/Sub" name="Suburb/town" required maxlength="40" pattern="[A-Z a-z]+" placeholder="Enter Town/Suburb Name">
-      <!-- State Dropdown Menu -->
-      <label for="State">State:</label>
-      <select id="State" name="State" required>
-        <option value="">Please Select Your State</option>  
-                <option value="VIC">VIC</option>  
-                <option value="NSW">NSW</option>  
-                <option value="QLD">QLD</option>
-                <option value="NT">NT</option>  
-                <option value="WA">WA</option>  
-                <option value="SA">SA</option>  
-                <option value="TAS">TAS</option>  
-                <option value="ACT">ACT</option>  
-      </select>  
+<main>
+  <h1>Job Application Form</h1>
+  <form action="process_eoi.php" method="post" novalidate="novalidate">
     
-      <!-- Postcode Field -->
-      <label for="PostCode">PostCode</label>
-      <input type="text" id="PostCode" name="PostCode" required pattern="\d{4}" placeholder="Enter PostCode">
-    </fieldset>
-    <!-- Contact Information -->
-    <fieldset>
-      <legend>Contact Details</legend>
-      <!-- Email Input -->
-      <label for="Email">Email:</label>
-      <input type="email" id="Email" name="Email address" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" placeholder="Enter Email">
-      <!-- Phone Number Input -->
-      <label for="PhoneNumber">Phone Number</label>
-      <input type="text" id="PhoneNumber" name="Phone Number" required pattern="[0-9 ]{8,12}" placeholder="Enter Phone Number">
-    </fieldset>
-    <!-- Technical Skills Checkboxes -->
-    <fieldset>
-      <legend>Technical Skills</legend>
-      <!-- At least one must be selected due to 'required' on first checkbox -->
-      <input type="checkbox" id="HTML" name="Required technical list" value="HTML" required>
-      <label for="HTML">HTML</label>
-      
-      <input type="checkbox" id="CSS" name="Required technical list" value="CSS">
-      <label for="CSS">CSS</label>
-      
-      <input type="checkbox" id="JAVA" name="Required technical list" value="JAVA">
-      <label for="JAVA">JAVA</label>
-    </fieldset>
-    <!-- Additional Skills Textarea -->
-    <fieldset>
-      <legend>Extras Skills</legend>
-      <label for="Otherskills">Other skills</label>
-      <textarea id="Otherskills" name="Other skills"></textarea>
-    </fieldset>
-    <!-- Submit Button -->
-    <input type="submit" value="Apply">
+    <label for="jobRef">Job Reference Number:</label>
+    <select id="jobRef" name="jobRef" required>
+      <option value="">-- Select a Job --</option>
+      <option value="JOB001">JOB001 - Cloud Engineer</option>
+      <option value="JOB002">JOB002 - DevOps Engineer</option>
+      <option value="JOB003">JOB003 - Senior Engineer</option>
+    </select>
 
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" maxlength="20" required />
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" maxlength="20" required />
+
+    <label for="dob">Date of Birth (dd/mm/yyyy):</label>
+    <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" required />
+
+    <fieldset>
+      <legend>Gender:</legend>
+      <input type="radio" id="male" name="gender" value="Male" required />
+      <label for="male">Male</label>
+
+      <input type="radio" id="female" name="gender" value="Female" />
+      <label for="female">Female</label>
+
+      <input type="radio" id="other" name="gender" value="Other" />
+      <label for="other">Other</label>
+    </fieldset>
+
+    <label for="street">Street Address:</label>
+    <input type="text" id="street" name="street" maxlength="40" required />
+
+    <label for="suburb">Suburb/Town:</label>
+    <input type="text" id="suburb" name="suburb" maxlength="40" required />
+
+    <label for="state">State:</label>
+    <select id="state" name="state" required>
+      <option value="">-- Select State --</option>
+      <option value="VIC">VIC</option>
+      <option value="NSW">NSW</option>
+      <option value="QLD">QLD</option>
+      <option value="NT">NT</option>
+      <option value="WA">WA</option>
+      <option value="SA">SA</option>
+      <option value="TAS">TAS</option>
+      <option value="ACT">ACT</option>
+    </select>
+
+    <label for="postcode">Postcode:</label>
+    <input type="text" id="postcode" name="postcode" maxlength="4" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" placeholder="8-12 digits or spaces" required />
+
+    <fieldset>
+      <legend>Technical Skills (select all that apply):</legend>
+      <input type="checkbox" id="skill1" name="skills[]" value="Skill1" />
+      <label for="skill1">Skill 1</label>
+
+      <input type="checkbox" id="skill2" name="skills[]" value="Skill2" />
+      <label for="skill2">Skill 2</label>
+
+      <input type="checkbox" id="skill3" name="skills[]" value="Skill3" />
+      <label for="skill3">Skill 3</label>
+
+      <input type="checkbox" id="otherSkill" name="skills[]" value="Other" />
+      <label for="otherSkill">Other Skills</label>
+    </fieldset>
+
+    <label for="otherSkills">If other skills selected, please describe:</label>
+    <textarea id="otherSkills" name="otherSkills" rows="4" cols="40"></textarea>
+
+    <button type="submit">Submit Application</button>
   </form>
-  <!-- Page footer -->
+</main>
 
-<!--php include of the footer -->
 <?php include 'footer.inc'; ?>
 
 </body>
-
 </html>
