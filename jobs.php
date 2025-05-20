@@ -1,169 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Meta tags for character encoding and responsive design -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cloud Engineering Jobs at QuantumTech" />
-  
-  <!-- Title of the web page -->
-  <title>QuantumTech | Jobs</title>
-  
-  <!-- Linking external stylesheet -->
-  <link href="Styles/Styles.css" rel="stylesheet">
-</head>
+<?php
+require_once 'settings.php';
 
-<body>
-<!--php include of the header -->
-<?php include 'header.inc'; ?>
+// Connect to database
+$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+if (!$conn) {
+    die("Database connection failed: " . mysqli_connect_error());
+}
 
-  <!-- Main content area -->
-  <main>
-    <!-- Main heading -->
-    <h1>Open Positions at QuantumTech</h1>
+// Fetch all jobs
+$sql = "SELECT jobRef, jobTitle, jobDescription FROM jobs ORDER BY jobRef";
+$result = mysqli_query($conn, $sql);
 
-    <!-- Cloud Engineer Job Section -->
-    <section>
-      <div class="Engineer Cloud-Engineer">
-      <h2>Cloud Engineer</h2>
-      <p><strong>Reference:</strong> QTCE1</p>
-      <!-- Job salary and reporting information -->
-      <p><strong>Salary Range:</strong> $95,000 – $130,000</p>
-      <p><strong>Reports to:</strong> Cloud Services Manager</p>
+include 'header.inc';
+include 'nav.inc'; // if you have a navigation include
 
-      <!-- Job summary -->
-      <h3>Position Summary</h3>
-      <p>As a Cloud Engineer at QuantumTech, you will be responsible for designing, implementing, and managing scalable cloud-based infrastructure solutions that support our enterprise and client platforms.</p>
+?>
 
-      <!-- Responsibilities list -->
-      <h3>Key Responsibilities</h3>
-      <ul>
-        <li>Deploy and manage cloud infrastructure using AWS, Azure, or GCP</li>
-        <li>Automate deployment and management processes with Infrastructure as Code (IaC)</li>
-        <li>Monitor system performance and implement scaling solutions</li>
-        <li>Ensure security compliance and perform routine audits</li>
-      </ul>
+<main>
+  <h1>Available Job Positions</h1>
 
-      <!-- Qualifications list -->
-      <h3>Qualifications & Skills</h3>
-      <ol>
-        <li><strong>Essential:</strong>
-          <ul>
-            <li>Bachelor's degree in IT, Computer Science, or related field</li>
-            <li>Minimum 2 years experience with cloud platforms (AWS/GCP/Azure)</li>
-            <li>Knowledge of Docker, Kubernetes, and Linux systems</li>
-            <li>Strong scripting skills (Python, Bash)</li>
-          </ul>
-        </li>
-        <li><strong>Preferable:</strong>
-          <ul>
-            <li>Certification in AWS/Azure/GCP</li>
-            <li>Experience with Terraform or CloudFormation</li>
-            <li>Knowledge of CI/CD pipelines and monitoring tools</li>
-          </ul>
-        </li>
-      </ol>
+  <?php if (mysqli_num_rows($result) > 0): ?>
+    <section class="job-listings">
+      <?php while ($row = mysqli_fetch_assoc($result)): ?>
+        <article class="job-posting">
+          <h2><?php echo htmlspecialchars($row['jobTitle']); ?> (<?php echo htmlspecialchars($row['jobRef']); ?>)</h2>
+          <p><?php echo nl2br(htmlspecialchars($row['jobDescription'])); ?></p>
+        </article>
+      <?php endwhile; ?>
     </section>
+  <?php else: ?>
+    <p>No job listings available at the moment. Please check back later.</p>
+  <?php endif; ?>
 
-    <!-- DevOps Engineer Job Section -->
-    <section>
-      <div class="Engineer DevOps-Engineer">
-      <h2>DevOps Engineer</h2>
-      <p><strong>Reference:</strong> QTDE2</p>
-      <p><strong>Salary Range:</strong> $90,000 – $125,000</p>
-      <p><strong>Reports to:</strong> DevOps Team Lead</p>
+</main>
 
-      <h3>Position Summary</h3>
-      <p>The DevOps Engineer will collaborate with developers, testers, and cloud architects to implement CI/CD pipelines and automate infrastructure deployment across our applications.</p>
-
-      <h3>Key Responsibilities</h3>
-      <ul>
-        <li>Build and maintain CI/CD pipelines using GitHub Actions, Jenkins, or GitLab</li>
-        <li>Work closely with developers to deploy code in cloud-native environments</li>
-        <li>Automate security and performance testing as part of the deployment process</li>
-        <li>Improve developer workflows and increase deployment speed</li>
-      </ul>
-
-      <h3>Qualifications & Skills</h3>
-      <ol>
-        <li><strong>Essential:</strong>
-          <ul>
-            <li>Degree in Software Engineering or related field</li>
-            <li>Experience in DevOps practices and CI/CD tools</li>
-            <li>Proficiency with Docker and container orchestration</li>
-            <li>Understanding of cloud security principles</li>
-          </ul>
-        </li>
-        <li><strong>Preferable:</strong>
-          <ul>
-            <li>Exposure to Agile methodologies</li>
-            <li>Hands-on experience with GitOps and Helm charts</li>
-            <li>Knowledge of observability tools (ELK, Datadog)</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-
-    <!-- Site Reliability Engineer Job Section -->
-    <section>
-      <div class="Engineer SR-Engineer">
-      <h2>Site Reliability Engineer (SRE)</h2>
-      <p><strong>Reference:</strong> QTSRE3</p>
-      <p><strong>Salary Range:</strong> $100,000 – $135,000</p>
-      <p><strong>Reports to:</strong> Cloud Infrastructure Lead</p>
-
-      <h3>Position Summary</h3>
-      <p>As a Site Reliability Engineer at QuantumTech, you will ensure the reliability, scalability, and performance of our cloud infrastructure through monitoring, automation, and software engineering best practices.</p>
-
-      <h3>Key Responsibilities</h3>
-      <ul>
-        <li>Implement automated systems to monitor infrastructure health</li>
-        <li>Design solutions to ensure high availability and disaster recovery</li>
-        <li>Manage performance and capacity planning</li>
-        <li>Collaborate with development teams to embed reliability into software</li>
-      </ul>
-
-      <h3>Qualifications & Skills</h3>
-      <ol>
-        <li><strong>Essential:</strong>
-          <ul>
-            <li>Bachelor’s in Computer Engineering or related field</li>
-            <li>Strong background in systems engineering or software development</li>
-            <li>Experience with monitoring tools (Prometheus, Grafana, etc.)</li>
-            <li>Fluent in automation and scripting (Bash, Go, Python)</li>
-          </ul>
-        </li>
-        <li><strong>Preferable:</strong>
-          <ul>
-            <li>Google SRE Certification</li>
-            <li>Understanding of incident response protocols</li>
-            <li>Experience with Service-Level Objectives (SLOs) and SLIs</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-
-    <!-- Company perks section -->
-    <section>
-      <h3>Why Join Our Cloud Team?</h3>
-      <p>At QuantumTech, you’ll be working with the most advanced cloud technologies in an inclusive and growth-oriented environment:</p>
-      <ul>
-        <li>🏆 Award-winning cloud projects</li>
-        <li>🌐 Global-scale infrastructure solutions</li>
-        <li>📈 Paid certifications and training programs</li>
-        <li>💡 Hackathons and innovation sprints</li>
-      </ul>
-    </section>
-
-    <!-- Fun fact or employee benefits section -->
-    <aside>
-      <h3>Did You Know?</h3>
-      <p>QuantumTech provides relocation support, remote work options, and generous health benefits to all our engineers!</p>
-    </aside>
-  </main>
-
-<!--php include of the footer -->
-<?php include 'footer.inc'; ?>
-
-</body>
-</html>
+<?php
+include 'footer.inc';
+mysqli_close($conn);
+?>
