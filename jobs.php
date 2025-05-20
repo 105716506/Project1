@@ -1,11 +1,13 @@
 <?php
 require_once 'settings.php';
 
+// Connect to the database
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("Database connection failed: " . mysqli_connect_error());
 }
 
+// Fetch all jobs ordered by job reference
 $sql = "SELECT * FROM jobs ORDER BY jobRef";
 $result = mysqli_query($conn, $sql);
 
@@ -57,19 +59,21 @@ include 'header.inc';
       </section>
     <?php endwhile; ?>
 
-    <?php if (!empty($job['perks'])): ?>
     <section>
       <h3>Why Join Our Cloud Team?</h3>
-      <p><?php echo nl2br(htmlspecialchars($job['perks'])); ?></p>
+      <p>At QuantumTech, you’ll be working with the most advanced cloud technologies in an inclusive and growth-oriented environment:</p>
+      <ul>
+        <li>🏆 Award-winning cloud projects</li>
+        <li>🌐 Global-scale infrastructure solutions</li>
+        <li>📈 Paid certifications and training programs</li>
+        <li>💡 Hackathons and innovation sprints</li>
+      </ul>
     </section>
-    <?php endif; ?>
 
-    <?php if (!empty($job['funFact'])): ?>
     <aside>
       <h3>Did You Know?</h3>
-      <p><?php echo nl2br(htmlspecialchars($job['funFact'])); ?></p>
+      <p>QuantumTech provides relocation support, remote work options, and generous health benefits to all our engineers!</p>
     </aside>
-    <?php endif; ?>
 
   <?php else: ?>
     <p>No job listings available at the moment. Please check back later.</p>
