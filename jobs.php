@@ -30,9 +30,8 @@ include 'header.inc';
           <h3>Key Responsibilities</h3>
           <ul>
             <?php
-              // Assuming responsibilities stored as newline separated list
-              $respItems = explode("\n", $job['keyResponsibilities']);
-              foreach ($respItems as $resp) {
+              $responsibilities = explode("\n", $job['keyResponsibilities']);
+              foreach ($responsibilities as $resp) {
                 echo '<li>' . htmlspecialchars(trim($resp)) . '</li>';
               }
             ?>
@@ -41,10 +40,8 @@ include 'header.inc';
           <h3>Qualifications & Skills</h3>
           <ol>
             <?php
-              // Assuming qualifications stored with sub-lists separated by blank lines
-              $qualSections = explode("\n\n", $job['qualifications']);
+              $qualSections = explode("\n\n", trim($job['qualifications']));
               foreach ($qualSections as $section) {
-                // Split first line as header, rest as list
                 $lines = explode("\n", trim($section));
                 if(count($lines) > 0) {
                   echo '<li><strong>' . htmlspecialchars(array_shift($lines)) . '</strong><ul>';
@@ -60,25 +57,19 @@ include 'header.inc';
       </section>
     <?php endwhile; ?>
 
-    <?php
-    // Display perks and fun fact if present in any job or add static ones here if preferred
-    // Example static perks:
-    ?>
+    <?php if (!empty($job['perks'])): ?>
     <section>
       <h3>Why Join Our Cloud Team?</h3>
-      <p>At QuantumTech, you’ll be working with the most advanced cloud technologies in an inclusive and growth-oriented environment:</p>
-      <ul>
-        <li>🏆 Award-winning cloud projects</li>
-        <li>🌐 Global-scale infrastructure solutions</li>
-        <li>📈 Paid certifications and training programs</li>
-        <li>💡 Hackathons and innovation sprints</li>
-      </ul>
+      <p><?php echo nl2br(htmlspecialchars($job['perks'])); ?></p>
     </section>
+    <?php endif; ?>
 
+    <?php if (!empty($job['funFact'])): ?>
     <aside>
       <h3>Did You Know?</h3>
-      <p>QuantumTech provides relocation support, remote work options, and generous health benefits to all our engineers!</p>
+      <p><?php echo nl2br(htmlspecialchars($job['funFact'])); ?></p>
     </aside>
+    <?php endif; ?>
 
   <?php else: ?>
     <p>No job listings available at the moment. Please check back later.</p>
