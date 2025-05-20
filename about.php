@@ -12,6 +12,7 @@
 
 <body>
 <?php include 'header.inc'; ?>
+<?php include 'nav.inc'; ?>
 
 <main>
   <h1>About Our Team</h1>

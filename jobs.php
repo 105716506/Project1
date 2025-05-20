@@ -16,6 +16,7 @@
 <body>
 <!--php include of the header -->
 <?php include 'header.inc'; ?>
+<?php include 'nav.inc'; ?>
 
   <!-- Main content area -->
   <main>
