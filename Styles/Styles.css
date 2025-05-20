@@ -273,6 +273,30 @@
         width: 90%;
       } 
     }
+.job-listings {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.job-posting {
+  background-color: #f0f0ff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(25, 39, 83, 0.1);
+}
+
+.job-posting h2 {
+  color: #0a0036;
+  margin-bottom: 0.5rem;
+}
+
+.job-posting p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #192753;
+}
 
 /*Hover style for menu links*/
   nav a:hover {
