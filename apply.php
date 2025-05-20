@@ -63,7 +63,7 @@
     </select>
 
     <label for="postcode">Postcode:</label>
-    <input type="text" id="postcode" name="postcode" maxlength="4" required />
+    <input type="text" id="postcode" name="postcode" maxlength="6" required />
 
     <label for="email">Email Address:</label>
     <input type="email" id="email" name="email" required />
