@@ -6,17 +6,6 @@
   <title>QuantumTech | About</title>
   <link href="Styles/Styles.css" rel="stylesheet" />
   <style>
-    /* Hero banner */
-    header.hero {
-      background-color: #0a0036; /* dark blue from your CSS */
-      color: #fff;
-      padding: 3rem 1rem;
-      text-align: center;
-      font-weight: 700;
-      font-size: 2.8rem;
-      letter-spacing: 1.5px;
-    }
-
     main {
       max-width: 1000px;
       margin: 2rem auto;
@@ -31,7 +20,7 @@
     }
 
     section.team-info h2 {
-      border-bottom: 3px solid #6f6ff5; /* subtle accent */
+      border-bottom: 3px solid #0074D9; /* blue accent */
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
       color: #0a0036;
@@ -47,7 +36,6 @@
       font-weight: 600;
     }
 
-    /* Team member cards container */
     .team-cards {
       display: flex;
       gap: 2rem;
@@ -55,9 +43,8 @@
       justify-content: center;
     }
 
-    /* Individual card */
     .team-card {
-      background: #f0f0ff;
+      background: #e6f0ff;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(25, 39, 83, 0.1);
       width: 280px;
@@ -75,7 +62,7 @@
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      background-color: #6f6ff5;
+      background-color: #0074D9; /* blue */
       margin: 0 auto 1rem;
       display: flex;
       align-items: center;
@@ -95,7 +82,7 @@
     .team-card p.role {
       font-weight: 600;
       font-size: 0.9rem;
-      color: #6f6ff5;
+      color: #0074D9;
       margin-bottom: 1rem;
     }
 
@@ -106,12 +93,12 @@
       white-space: pre-wrap;
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       .team-cards {
         flex-direction: column;
         align-items: center;
       }
+
       .team-card {
         width: 90%;
       }
@@ -121,13 +108,10 @@
 <body>
 
 <?php include 'header.inc'; ?>
-<?php include 'nav.inc'; ?>
-
-<header class="hero">
-  About Our Team
-</header>
 
 <main>
+  <h1 style="text-align:center; font-size:2.5rem; color:#0a0036; margin-bottom:2rem;">About Our Team</h1>
+
   <section class="team-info">
     <h2>Quantum Creators</h2>
     <p><strong>Class Time:</strong> Thursday, 12:30 PM – 2:30 PM</p>
@@ -143,7 +127,6 @@
   <section class="team-info">
     <h2>Meet the Team</h2>
     <div class="team-cards">
-
       <?php
       $teamMembers = [
         [
@@ -175,7 +158,6 @@
         echo '</div>';
       }
       ?>
-
     </div>
   </section>
 
@@ -185,7 +167,6 @@
       <figcaption style="margin-top:0.5rem; font-weight:600; color:#0a0036;">QuantumTech Team – Semester 1, 2025</figcaption>
     </figure>
   </section>
-
 </main>
 
 <?php include 'footer.inc'; ?>
