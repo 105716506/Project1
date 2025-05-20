@@ -6,8 +6,10 @@
   <title>QuantumTech | About</title>
   <link href="Styles/Styles.css" rel="stylesheet" />
 </head>
+
 <body>
 
+<!--php include of the header -->
 <?php include 'header.inc'; ?>
 
 <main>

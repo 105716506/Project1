@@ -14,7 +14,6 @@
 <body>
 <!--php include of the header -->
 <?php include 'header.inc'; ?>
-<?php include 'nav.inc'; ?>
 
   <main> <!-- Body Section-->
     <section class="Heading"> <!-- Welcome message-->
