@@ -1,33 +1,85 @@
 <?php
 require_once 'settings.php';
 
-// Connect to database
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("Database connection failed: " . mysqli_connect_error());
 }
 
-// Fetch all jobs
-$sql = "SELECT jobRef, jobTitle, jobDescription FROM jobs ORDER BY jobRef";
+$sql = "SELECT * FROM jobs ORDER BY jobRef";
 $result = mysqli_query($conn, $sql);
 
 include 'header.inc';
-include 'nav.inc'; // if you have a navigation include
-
 ?>
 
 <main>
-  <h1>Available Job Positions</h1>
+  <h1>Open Positions at QuantumTech</h1>
 
   <?php if (mysqli_num_rows($result) > 0): ?>
-    <section class="job-listings">
-      <?php while ($row = mysqli_fetch_assoc($result)): ?>
-        <article class="job-posting">
-          <h2><?php echo htmlspecialchars($row['jobTitle']); ?> (<?php echo htmlspecialchars($row['jobRef']); ?>)</h2>
-          <p><?php echo nl2br(htmlspecialchars($row['jobDescription'])); ?></p>
-        </article>
-      <?php endwhile; ?>
+    <?php while ($job = mysqli_fetch_assoc($result)): ?>
+      <section>
+        <div class="Engineer <?php echo htmlspecialchars($job['category']); ?>">
+          <h2><?php echo htmlspecialchars($job['jobTitle']); ?></h2>
+          <p><strong>Reference:</strong> <?php echo htmlspecialchars($job['jobRef']); ?></p>
+          <p><strong>Salary Range:</strong> <?php echo htmlspecialchars($job['salaryRange']); ?></p>
+          <p><strong>Reports to:</strong> <?php echo htmlspecialchars($job['reportsTo']); ?></p>
+
+          <h3>Position Summary</h3>
+          <p><?php echo nl2br(htmlspecialchars($job['positionSummary'])); ?></p>
+
+          <h3>Key Responsibilities</h3>
+          <ul>
+            <?php
+              // Assuming responsibilities stored as newline separated list
+              $respItems = explode("\n", $job['keyResponsibilities']);
+              foreach ($respItems as $resp) {
+                echo '<li>' . htmlspecialchars(trim($resp)) . '</li>';
+              }
+            ?>
+          </ul>
+
+          <h3>Qualifications & Skills</h3>
+          <ol>
+            <?php
+              // Assuming qualifications stored with sub-lists separated by blank lines
+              $qualSections = explode("\n\n", $job['qualifications']);
+              foreach ($qualSections as $section) {
+                // Split first line as header, rest as list
+                $lines = explode("\n", trim($section));
+                if(count($lines) > 0) {
+                  echo '<li><strong>' . htmlspecialchars(array_shift($lines)) . '</strong><ul>';
+                  foreach ($lines as $line) {
+                    echo '<li>' . htmlspecialchars(trim($line)) . '</li>';
+                  }
+                  echo '</ul></li>';
+                }
+              }
+            ?>
+          </ol>
+        </div>
+      </section>
+    <?php endwhile; ?>
+
+    <?php
+    // Display perks and fun fact if present in any job or add static ones here if preferred
+    // Example static perks:
+    ?>
+    <section>
+      <h3>Why Join Our Cloud Team?</h3>
+      <p>At QuantumTech, you’ll be working with the most advanced cloud technologies in an inclusive and growth-oriented environment:</p>
+      <ul>
+        <li>🏆 Award-winning cloud projects</li>
+        <li>🌐 Global-scale infrastructure solutions</li>
+        <li>📈 Paid certifications and training programs</li>
+        <li>💡 Hackathons and innovation sprints</li>
+      </ul>
     </section>
+
+    <aside>
+      <h3>Did You Know?</h3>
+      <p>QuantumTech provides relocation support, remote work options, and generous health benefits to all our engineers!</p>
+    </aside>
+
   <?php else: ?>
     <p>No job listings available at the moment. Please check back later.</p>
   <?php endif; ?>
