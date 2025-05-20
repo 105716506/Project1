@@ -3,5 +3,4 @@
  
 <header>
     <?php include 'nav.inc'; ?>
-    <img src="C:\xampp\htdocs\Project1\Project1\Styles\Styles_Images\Header_bg.png" class="logo" alt="QuntumTech Logo" />
 </header>
