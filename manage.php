@@ -39,4 +39,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $message = "EOI #$eoi status updated to $status.";
     }
 }
+// Get sorting field from GET request, default to EOInumber
+$sort_field = isset($_GET['sort_by']) ? $_GET['sort_by'] : 'EOInumber';
+// Define which fields are safe to sort by
+$valid_sort_fields = ['EOInumber', 'first_name', 'last_name', 'status'];
+// If the user gave an invalid field, use default
+if (!in_array($sort_field, $valid_sort_fields)) $sort_field = 'EOInumber';
+
+// Build filter conditions based on GET request
+$where = "1=1";  // default condition that always returns true
 
