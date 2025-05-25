@@ -290,7 +290,7 @@ ul.student-ids li {
     white-space: pre-wrap;
 }
 
-.link {
+.btn {
     display: inline-block;
     padding: 0.7em 2em;
     background: linear-gradient(90deg, #00adb5 0%, #393e46 100%);
@@ -309,7 +309,7 @@ ul.student-ids li {
     cursor: pointer;
 }
 
-.link:hover, .btn:focus {
+.btn:hover, .btn:focus {
     background: linear-gradient(90deg, #393e46 0%, #00adb5 100%);
     color: #fff;
     transform: scale(1.08) translateY(-3px);

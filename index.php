@@ -24,13 +24,13 @@
     <section class="hero"> <!-- Descriptions-->
         <h1>Innovating the Future of Technology</h1>
         <p>QuantumTech leads the way in AI, cloud, and quantum computing solutions.</p>
-        <a href="jobs.php" class="link">Explore Careers</a>
+        <a href="jobs.php" class="btn">Explore Careers</a>
       </section>
 
       <section class="about-preview">
         <h1>Who We Are</h1>
         <p>QuantumTech is a pioneering tech company focused on transforming industries through cutting-edge AI,<br> scalable cloud solutions, and quantum technologies. Our teams are passionate, inclusive, and always evolving.</p>
-        <a href="about.php" class="link">Meet the Team →</a>
+        <a href="about.php" class="btn">Meet the Team →</a>
       </section>
       
       <section class="why-join">
