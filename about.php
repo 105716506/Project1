@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="QuantumTech, Technology, Future, Website, Cloud, Engineer, FrontEnd, Developer, Data, Analyst, Jobs, Apply, Salary, Careers" />
   <title>QuantumTech | About</title>
   <link href="Styles/Styles.css" rel="stylesheet" />
 </head>
