@@ -126,3 +126,29 @@ $result = mysqli_query($conn, $sql);
             <th>EOI#</th><th>Job Ref</th><th>First Name</th><th>Last Name</th>
             <th>Email</th><th>Phone</th><th>Status</th><th>Update Status</th>
         </tr>
+         <!-- Loop through each EOI and show in the table -->   
+         <?php while ($row = mysqli_fetch_assoc($result)): ?>
+        <tr>
+            <td><?= $row['EOInumber'] ?></td>
+            <td><?= $row['job_reference_number'] ?></td>
+            <td><?= $row['first_name'] ?></td>
+            <td><?= $row['last_name'] ?></td>
+            <td><?= $row['email'] ?></td>
+            <td><?= $row['phone'] ?></td>
+            <td><?= $row['status'] ?></td>
+            <td>
+                <!-- Form to update status of individual EOI -->
+                <form method="post" action="manage.php">
+                    <input type="hidden" name="eoi_number" value="<?= $row['EOInumber'] ?>">
+                    <select name="new_status">
+                        <option value="New">New</option>
+                        <option value="Current">Current</option>
+                        <option value="Final">Final</option>
+                    </select>
+                    <input type="submit" name="update_status" value="Update">
+                </form>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+</main>
