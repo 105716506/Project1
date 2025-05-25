@@ -8,10 +8,6 @@
 </head>
 
 <body>
-<!--php include of the header -->
-<?php include 'header.inc'; ?>
-
-<?php
 // Include database settings
 require_once 'settings.php';
 
@@ -25,6 +21,10 @@ if (!$conn) {
 // SQL query to fetch all job listings, ordered by job reference
 $sql = "SELECT * FROM jobs ORDER BY jobRef";
 $result = mysqli_query($conn, $sql);
+
+// Include the page header
+include 'header.inc';
+?>
 
 <main>
   <h1>Open Positions at QuantumTech</h1>
