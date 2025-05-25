@@ -8,7 +8,6 @@
 </head>
 
 <body>
-// Include database settings
 <?php
 require_once 'settings.php';
 
