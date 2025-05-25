@@ -70,3 +70,9 @@ if (!empty($_GET['first_name'])) {
     $fn = mysqli_real_escape_string($conn, $_GET['first_name']);
     $where .= " AND first_name LIKE '%$fn%'";
 }
+
+// If last name is provided, filter by it
+if (!empty($_GET['last_name'])) {
+    $ln = mysqli_real_escape_string($conn, $_GET['last_name']);
+    $where .= " AND last_name LIKE '%$ln%'";
+}
