@@ -9,6 +9,7 @@
 
 <body>
 // Include database settings
+<?php
 require_once 'settings.php';
 
 // Attempt to connect to the database
