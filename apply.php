@@ -24,8 +24,6 @@ if (!$conn) {
 $sql = "SELECT * FROM jobs ORDER BY jobRef";
 $result = mysqli_query($conn, $sql);
 
-include 'header.inc'; // Include the site header
-?>
 
 <main>
   <h1>Open Positions at QuantumTech</h1>
