@@ -1,5 +1,5 @@
 /* 
-  Author: Ramiru Hewavithana & Linuka Jayawardhana
+  Author: Ramiru Hewavithana and Linuka Jayawardhana
   Purpose: External CSS for QuantumTech - Styles all pages with a consistent look and feel.
 */
 
@@ -266,3 +266,102 @@ ul.student-ids li {
     h1 {
         font-size: 2.5rem;
     }
+    nav ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .logo-container {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-card {
+        width: 90%;
+    }
+}
+
+/* Job Listings */
+.job-listings {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.job-posting {
+    background-color: #f0f0ff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(25, 39, 83, 0.1);
+}
+.job-posting h2 {
+    color: #0a0036;
+    margin-bottom: 0.5rem;
+}
+.job-posting p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #192753;
+}
+
+/* Table styles (about.html) */
+table {
+    width: 80%;
+    margin: 2em auto;
+    border-collapse: collapse;
+    border: 2px solid #333;
+}
+th, td {
+    border: 2px solid #333;
+    padding: 0.8em;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+caption {
+    caption-side: top;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+/* Form validation and success styling */
+.error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+/* HR Manager Table (manage.php) */
+.manager-table {
+    width: 90%;
+    margin: 2em auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+.manager-table th {
+    background-color: #6f6ff5;
+    color: white;
+    padding: 1em;
+    text-transform: uppercase;
+}
+.manager-table td {
+    padding: 0.75em;
+    border: 1px solid #ccc;
+}
+.manager-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
