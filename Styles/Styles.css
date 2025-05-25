@@ -150,28 +150,50 @@ button:hover {
 }
 
 /* NAVIGATION STYLES */
+nav {
+    background: rgba(34, 40, 49, 0.95);  /* Stylish semi-transparent background */
+    padding: 0.5em 0;
+    border-radius: 2em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 1em auto;
+    max-width: 900px;                    /* Keeps nav centered and not full width on wide screens */
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5em;
-    margin-top: 1em;
+    gap: 2em;
     justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
     flex-wrap: wrap;
 }
 
 nav a {
     text-decoration: none;
-    padding: 0.4em 1em;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 105px;
-    color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.5em 1.5em;
+    background: linear-gradient(90deg, #393e46 0%, #00adb5 100%);
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    outline: none;
 }
 
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+nav a:hover, nav a:focus {
+    background: linear-gradient(90deg, #00adb5 0%, #393e46 100%);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,173,181,0.18);
+    text-decoration: none;
+    outline: none;
 }
+
 
 /* Aside styling */
 aside {
