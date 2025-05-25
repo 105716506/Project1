@@ -113,3 +113,9 @@ $result = mysqli_query($conn, $sql);
         </label>
         <input type="submit" value="Filter / Sort">
     </form>
+
+    <!-- Delete EOIs by Job Reference Form -->
+    <form method="post" action="manage.php" onsubmit="return confirm('Are you sure you want to delete?');">
+        <label>Delete EOIs with Job Ref: <input type="text" name="delete_job_ref" required /></label>
+        <input type="submit" value="Delete">
+    </form>
