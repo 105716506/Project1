@@ -59,3 +59,14 @@ if (!in_array($sort_field, $valid_sort_fields)) $sort_field = 'EOInumber';
 // Build filter conditions based on GET request
 $where = "1=1";  // default condition that always returns true
 
+// If job reference is provided, filter by it
+if (isset($_GET['job_ref']) && $_GET['job_ref'] != "") {
+    $jobRef = mysqli_real_escape_string($conn, $_GET['job_ref']);
+    $where .= " AND job_reference_number = '$jobRef'";
+}
+
+// If first name is provided, filter by it
+if (!empty($_GET['first_name'])) {
+    $fn = mysqli_real_escape_string($conn, $_GET['first_name']);
+    $where .= " AND first_name LIKE '%$fn%'";
+}
