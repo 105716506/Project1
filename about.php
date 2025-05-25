@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="QuantumTech, Technology, Future, Website, Cloud, Engineer, FrontEnd, Developer, Data, Analyst, Jobs, Apply, Salary, Careers" />
   <title>QuantumTech | About</title>
   <link href="Styles/Styles.css" rel="stylesheet" />
 </head>
@@ -62,6 +63,13 @@
       }
       ?>
     </div>
+    
+    <h2>Team Member Contributions</h2>
+<ul>
+  <li><strong>Your Name:</strong> Developed the application form and implemented form submission handling in `process_eoi.php`, built the dynamic job listing from the database in `jobs.php` and `apply.php`, and designed the database schema for `eoi` and `jobs`.</li>
+  <!-- Add your teammates and what they did -->
+</ul>
+
   </section>
 
   <section class="team-info" style="text-align:center; margin-top:3rem;">

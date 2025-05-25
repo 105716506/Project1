@@ -76,3 +76,36 @@ if (!empty($_GET['last_name'])) {
     $ln = mysqli_real_escape_string($conn, $_GET['last_name']);
     $where .= " AND last_name LIKE '%$ln%'";
 }
+
+// Build the final SQL query with WHERE and ORDER BY
+$sql = "SELECT * FROM eoi WHERE $where ORDER BY $sort_field";
+
+// Run the query and store results
+$result = mysqli_query($conn, $sql);
+?>
+
+<!-- Include header and navigation HTML -->
+<?php include 'header.inc'; ?>
+<?php include 'nav.inc'; ?>
+
+<main>
+    <h2>Manage EOIs</h2>
+
+    <!-- Display any success or feedback messages -->
+    <p><?= $message ?></p>
+
+    <!-- Filter/Search Form -->
+    <form method="get" action="manage.php">
+        <label>Job Reference: <input type="text" name="job_ref" /></label>
+        <label>First Name: <input type="text" name="first_name" /></label>
+        <label>Last Name: <input type="text" name="last_name" /></label>
+        <label>Sort by:
+            <select name="sort_by">
+                <option value="EOInumber">EOI Number</option>
+                <option value="first_name">First Name</option>
+                <option value="last_name">Last Name</option>
+                <option value="status">Status</option>
+            </select>
+        </label>
+        <input type="submit" value="Filter / Sort">
+    </form>

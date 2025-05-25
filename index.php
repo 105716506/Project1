@@ -5,7 +5,7 @@
 <head> <!--meta tags-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="HTML5, CSS layout, QuantumTech, Technology, Future, Website" />
+  <meta name="keywords" content="QuantumTech, Technology, Future, Website, Cloud, Engineer, FrontEnd, Developer, Data, Analyst, Jobs, Apply, Salary, Careers" />
   <meta name="description" content="Welcome to QuantumTech - Innovating the Future">
   <title>QuantumTech | Home</title> <!-- title of the website-->
   <link href="Styles/Styles.css" rel="stylesheet"> <!-- References to external CSS files -->
@@ -24,13 +24,13 @@
     <section class="hero"> <!-- Descriptions-->
         <h1>Innovating the Future of Technology</h1>
         <p>QuantumTech leads the way in AI, cloud, and quantum computing solutions.</p>
-        <a href="jobs.html" class="btn">Explore Careers</a>
+        <a href="jobs.php" class="btn">Explore Careers</a>
       </section>
 
       <section class="about-preview">
         <h1>Who We Are</h1>
         <p>QuantumTech is a pioneering tech company focused on transforming industries through cutting-edge AI,<br> scalable cloud solutions, and quantum technologies. Our teams are passionate, inclusive, and always evolving.</p>
-        <a href="about.html">Meet the Team →</a>
+        <a href="about.php" class="btn">Meet the Team →</a>
       </section>
       
       <section class="why-join">
