@@ -180,9 +180,12 @@ nav a {
     font-weight: 600;
     font-size: 1.1em;
     letter-spacing: 0.5px;
-    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    transition: 
+        background 0.3s,
+        color 0.3s,
+        box-shadow 0.3s,
+        transform 0.18s cubic-bezier(.17,.67,.67,1.58); /* For pop effect */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-    transform: scale(1.11) translateY(-3px);
     cursor: pointer;
     outline: none;
 }
@@ -190,10 +193,13 @@ nav a {
 nav a:hover, nav a:focus {
     background: linear-gradient(90deg, #00adb5 0%, #393e46 100%);
     color: #fff;
-    box-shadow: 0 4px 12px rgba(0,173,181,0.18);
+    box-shadow: 0 8px 24px rgba(0, 173, 181, 0.26), 0 2px 8px rgba(0,0,0,0.18);
+    transform: scale(1.11);   /* Pop effect */
+    z-index: 2;
     text-decoration: none;
     outline: none;
 }
+
 
 
 /* Aside styling */
