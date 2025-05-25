@@ -1,4 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QuantumTech | Apply</title>
+  <link href="Styles/Styles.css" rel="stylesheet" />
+</head>
+<body></body>
 <?php
+
 // Start a new or resume an existing session
 session_start();
 // Include the database connection variables
