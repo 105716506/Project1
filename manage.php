@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Deleting EOIs by Job Reference Number
     if (isset($_POST['delete_job_ref'])) {
         $jobRef = mysqli_real_escape_string($conn, $_POST['delete_job_ref']);
-        $sql = "DELETE FROM eoi WHERE job_reference_number = '$jobRef'";
+        $sql = "DELETE FROM eoi WHERE jobRef = '$jobRef'";
         mysqli_query($conn, $sql);
         $message = "All EOIs with job reference $jobRef deleted.";
     }
