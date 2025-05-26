@@ -147,6 +147,11 @@ $result = mysqli_query($conn, $sql);
                     </form>
                 </td>
             </tr>
+
+            <?php if (isset($_SESSION['manager_logged_in'])): ?>
+                <a href="logout.php" class="logout-link">Logout</a>
+            <?php endif; ?>
+
             <?php endwhile; ?>
         </table>
     </main>
