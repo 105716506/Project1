@@ -315,6 +315,200 @@ ul.student-ids li {
     white-space: pre-wrap;
 }
 
+/* === Manage Page & Manager Forms (login/register) Enhancements === */
+
+/* Style for feedback messages */
+.success, .success-message {
+    background: #e6ffed;
+    color: #27703a;
+    border: 1px solid #b7e4c7;
+    border-radius: 8px;
+    padding: 0.8em 1.2em;
+    margin: 1em 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+.error, .error-message {
+    background: #ffeaea;
+    color: #a61117;
+    border: 1px solid #f7b8ba;
+    border-radius: 8px;
+    padding: 0.8em 1.2em;
+    margin: 1em 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Login/Register form card style */
+.manager-form {
+    background: #f8fbff;
+    padding: 2em 2em 1.5em 2em;
+    margin: 2.5em auto 2em auto;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(120,136,164,0.10);
+    max-width: 410px;
+    min-width: 260px;
+    text-align: left;
+}
+
+/* For login/register forms */
+.manager-form label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.3em;
+    margin-top: 1em;
+    color: #0a0036;
+}
+
+.manager-form input[type="text"],
+.manager-form input[type="password"],
+.manager-form input[type="number"],
+.manager-form select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #b8c6e4;
+    border-radius: 8px;
+    margin-bottom: 0.9em;
+    font-size: 1em;
+    background: #fafdff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.manager-form input[type="text"]:focus,
+.manager-form input[type="password"]:focus,
+.manager-form input[type="number"]:focus,
+.manager-form select:focus {
+    border-color: #6f6ff5;
+    box-shadow: 0 0 7px #b8b8f9;
+    outline: none;
+}
+
+.manager-form input[type="submit"], 
+.manager-form button {
+    background: #6f6ff5;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 30px;
+    margin-top: 0.6em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(120,136,164,0.13);
+    transition: background 0.2s, transform 0.15s;
+}
+
+.manager-form input[type="submit"]:hover,
+.manager-form button:hover {
+    background: #393e46;
+    transform: scale(1.05);
+}
+
+.manager-form a {
+    color: #3498db;
+    font-weight: 500;
+    text-decoration: none;
+}
+.manager-form a:hover {
+    text-decoration: underline;
+}
+
+/* Manage Table Enhancements (EOIs table) */
+.manager-table, .eoi-table, .eoi-list-table {
+    width: 95%;
+    margin: 1.5em auto 2em auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 12px rgba(120,136,164,0.08);
+    background: #fff;
+}
+
+.manager-table th, .eoi-table th, .eoi-list-table th,
+.manager-table td, .eoi-table td, .eoi-list-table td {
+    padding: 0.75em 1em;
+    border: 1px solid #e3e7f1;
+    text-align: center;
+    font-size: 1em;
+}
+
+.manager-table th, .eoi-table th, .eoi-list-table th {
+    background: #6f6ff5;
+    color: #fff;
+    font-weight: 700;
+}
+
+.manager-table tr:nth-child(even),
+.eoi-table tr:nth-child(even),
+.eoi-list-table tr:nth-child(even) {
+    background: #f4f7fa;
+}
+
+.manager-table tr:hover,
+.eoi-table tr:hover,
+.eoi-list-table tr:hover {
+    background: #e8f0fd;
+}
+
+/* Sort Dropdown for Manage Page */
+.manager-sort-form {
+    margin: 1em auto 2em auto;
+    text-align: center;
+}
+.manager-sort-form label {
+    font-weight: 600;
+    color: #222;
+    margin-right: 0.7em;
+}
+.manager-sort-form select {
+    border-radius: 8px;
+    padding: 0.4em 1.2em;
+    border: 1px solid #b8c6e4;
+    background: #fafdff;
+    margin-right: 0.5em;
+}
+.manager-sort-form input[type="submit"] {
+    background: #6f6ff5;
+    color: #fff;
+    border-radius: 22px;
+    border: none;
+    padding: 0.45em 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(120,136,164,0.10);
+    transition: background 0.18s, transform 0.14s;
+}
+.manager-sort-form input[type="submit"]:hover {
+    background: #393e46;
+    transform: scale(1.06);
+}
+
+/* Center main headings for dashboard */
+main h1, main h2 {
+    text-align: center;
+    color: #253049;
+    font-weight: 800;
+    margin-bottom: 0.5em;
+}
+
+/* Optional: Logout link top-right */
+.logout-link {
+    display: inline-block;
+    float: right;
+    margin: 1em 2em 0 0;
+    color: #393e46;
+    background: #f7f8fa;
+    border: 1px solid #6f6ff5;
+    border-radius: 18px;
+    padding: 0.5em 1.4em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+}
+.logout-link:hover {
+    background: #6f6ff5;
+    color: #fff;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     h1 {

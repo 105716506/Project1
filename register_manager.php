@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h1>Manager Registration</h1>
     <?php foreach ($errors as $e) echo "<p style='color:red;'>$e</p>"; ?>
     <?php if ($success) echo "<p style='color:green;'>$success</p>"; ?>
-    <form method="post" action="register_manager.php" autocomplete="off">
+    <form class="manager-form" method="post" action="register_manager.php" autocomplete="off">
         <label>Username:
             <input type="text" name="username" maxlength="30" required>
         </label><br><br>

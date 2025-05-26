@@ -99,7 +99,7 @@ $result = mysqli_query($conn, $sql);
     <p><?= $message ?></p>
 
     <!-- Filter/Search Form -->
-    <form method="get" action="manage.php">
+    <form class="manager-table" method="get" action="manage.php">
         <label>Job Reference: <input type="text" name="job_ref" /></label>
         <label>First Name: <input type="text" name="first_name" /></label>
         <label>Last Name: <input type="text" name="last_name" /></label>

@@ -77,7 +77,7 @@ if ($_SESSION['login_attempts'] >= 3) {
             Too many failed login attempts. Please wait <?php echo ceil($remaining / 60); ?> minutes before trying again.
         </p>
     <?php else: ?>
-        <form method="post" action="login.php" autocomplete="off">
+        <form class="manager-form" method="post" action="login.php" autocomplete="off">
             <label>Username:
                 <input type="text" name="username" maxlength="30" required>
             </label><br><br>
