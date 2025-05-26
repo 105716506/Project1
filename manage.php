@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 // Get sorting field from GET request, default to EOInumber
 $sort_field = isset($_GET['sort_by']) ? $_GET['sort_by'] : 'EOInumber';
 // Define which fields are safe to sort by
-$valid_sort_fields = ['EOInumber', 'first_name', 'last_name', 'status'];
+$valid_sort_fields = ['EOInumber', 'firstName', 'lastName', 'status'];
 // If the user gave an invalid field, use default
 if (!in_array($sort_field, $valid_sort_fields)) $sort_field = 'EOInumber';
 
@@ -61,19 +61,19 @@ $where = "1=1";  // default condition that always returns true
 // If job reference is provided, filter by it
 if (isset($_GET['job_ref']) && $_GET['job_ref'] != "") {
     $jobRef = mysqli_real_escape_string($conn, $_GET['job_ref']);
-    $where .= " AND job_reference_number = '$jobRef'";
+    $where .= " AND jobRef = '$jobRef'";
 }
 
 // If first name is provided, filter by it
 if (!empty($_GET['first_name'])) {
     $fn = mysqli_real_escape_string($conn, $_GET['first_name']);
-    $where .= " AND first_name LIKE '%$fn%'";
+    $where .= " AND firstName LIKE '%$fn%'";
 }
 
 // If last name is provided, filter by it
 if (!empty($_GET['last_name'])) {
     $ln = mysqli_real_escape_string($conn, $_GET['last_name']);
-    $where .= " AND last_name LIKE '%$ln%'";
+    $where .= " AND lastName LIKE '%$ln%'";
 }
 
 // Build the final SQL query with WHERE and ORDER BY
