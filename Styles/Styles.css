@@ -1,5 +1,5 @@
 /* 
-  Author: Ramiru Hewavithana and Linuka Jayawardhana
+  Author: Ramiru Hewavithana 
   Purpose: External CSS for QuantumTech - Styles all pages with a consistent look and feel.
 */
 
@@ -317,28 +317,36 @@ ul.student-ids li {
 
 /* === Manage Page & Manager Forms (login/register) Enhancements === */
 
-/* Style for feedback messages */
-.success, .success-message {
+.success-message {
     background: #e6ffed;
     color: #27703a;
-    border: 1px solid #b7e4c7;
-    border-radius: 8px;
-    padding: 0.8em 1.2em;
-    margin: 1em 0;
-    font-weight: 500;
+    border: 1.5px solid #b7e4c7;
+    border-radius: 14px;
+    padding: 1.1em 1.7em 1.2em 1.7em;
+    margin: 2.5em auto 1.5em auto;
+    font-weight: 600;
+    font-size: 1.08em;
+    box-shadow: 0 1px 10px rgba(44,200,120,0.07);
+    max-width: 480px;
     text-align: center;
 }
+.success-message h2 { color: #27703a; font-weight: 700; margin-bottom: 0.8em; }
 
-.error, .error-message {
+.error-message {
     background: #ffeaea;
     color: #a61117;
-    border: 1px solid #f7b8ba;
-    border-radius: 8px;
-    padding: 0.8em 1.2em;
-    margin: 1em 0;
-    font-weight: 500;
+    border: 1.5px solid #f7b8ba;
+    border-radius: 14px;
+    padding: 1.1em 1.7em 1.2em 1.7em;
+    margin: 2.5em auto 1.5em auto;
+    font-weight: 600;
+    font-size: 1.08em;
+    box-shadow: 0 1px 10px rgba(200,50,50,0.06);
+    max-width: 480px;
     text-align: center;
 }
+.error-message h2 { color: #a61117; font-weight: 700; margin-bottom: 0.8em; }
+
 
 /* Login/Register form card style */
 .manager-form {
