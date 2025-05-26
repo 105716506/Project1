@@ -5,7 +5,6 @@
     <li><a href="apply.php">Apply</a></li>
     <li><a href="about.php">About</a></li>
 	  <li><a href="manage.php">Manage</a></li>
-    <li><a href="enhancement.php">Enhancements</a></li>
     <li><a href="mailto:info@quantumtech.com.au">Email Us</a></li>
   </ul>
 </nav>
