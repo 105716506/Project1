@@ -7,12 +7,12 @@
   <title>QuantumTech | Home</title> <!-- title of the website-->
   <link href="Styles/Styles.css" rel="stylesheet"> <!-- References to external CSS files -->
 </head>
-<body>
-    
+
     <!--php include of the header -->
 <?php include 'header.inc';?>
 <?php include 'nav.inc'; ?>
-</body>
+
+<body>
 <?php
 
 // Start a new or resume an existing session
@@ -98,7 +98,7 @@ $result = mysqli_query($conn, $sql);
     <p><?= $message ?></p>
 
     <!-- Filter/Search Form -->
-    <form class="manager-table" method="get" action="manage.php">
+    <form class="manager-sort-form" method="get" action="manage.php">
         <label>Job Reference: <input type="text" name="job_ref" /></label>
         <label>First Name: <input type="text" name="first_name" /></label>
         <label>Last Name: <input type="text" name="last_name" /></label>
@@ -114,13 +114,13 @@ $result = mysqli_query($conn, $sql);
     </form>
 
     <!-- Delete EOIs by Job Reference Form -->
-    <form method="post" action="manage.php" onsubmit="return confirm('Are you sure you want to delete?');">
+    <form class="manager-form" method="post" action="manage.php" onsubmit="return confirm('Are you sure you want to delete?');">
         <label>Delete EOIs with Job Ref: <input type="text" name="delete_job_ref" required /></label>
         <input type="submit" value="Delete">
     </form>
 
      <!-- Display EOIs in a table -->
-     <table border="1" cellpadding="5">
+     <table class="manager-table" table border="1" cellpadding="5">
         <tr>
             <th>EOI#</th><th>Job Ref</th><th>First Name</th><th>Last Name</th>
             <th>Email</th><th>Phone</th><th>Status</th><th>Update Status</th>
@@ -137,7 +137,7 @@ $result = mysqli_query($conn, $sql);
             <td><?= $row['status'] ?></td>
             <td>
                 <!-- Form to update status of individual EOI -->
-                <form method="post" action="manage.php">
+                <form class="manager-form" method="post" action="manage.php">
                     <input type="hidden" name="eoi_number" value="<?= $row['EOInumber'] ?>">
                     <select name="new_status">
                         <option value="New">New</option>
@@ -151,3 +151,4 @@ $result = mysqli_query($conn, $sql);
         <?php endwhile; ?>
     </table>
 </main>
+</body>
