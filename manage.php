@@ -8,8 +8,10 @@
   <link href="Styles/Styles.css" rel="stylesheet"> <!-- References to external CSS files -->
 </head>
 <body>
+    
     <!--php include of the header -->
 <?php include 'header.inc';?>
+<?php include 'nav.inc'; ?>
 </body>
 <?php
 
@@ -88,9 +90,6 @@ $sql = "SELECT * FROM eoi WHERE $where ORDER BY $sort_field";
 $result = mysqli_query($conn, $sql);
 ?>
 
-<!-- Include header and navigation HTML -->
-<?php include 'header.inc'; ?>
-<?php include 'nav.inc'; ?>
 
 <main>
     <h2>Manage EOIs</h2>
