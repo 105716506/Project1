@@ -489,11 +489,9 @@ main h1, main h2 {
     margin-bottom: 0.5em;
 }
 
-/* Optional: Logout link top-right */
 .logout-link {
     display: inline-block;
-    float: right;
-    margin: 1em 2em 0 0;
+    margin: 2.5em auto 2em auto; /* Top and bottom margin, auto to center horizontally */
     color: #393e46;
     background: #f7f8fa;
     border: 1px solid #6f6ff5;
@@ -502,11 +500,17 @@ main h1, main h2 {
     font-weight: 600;
     text-decoration: none;
     transition: background 0.15s, color 0.15s;
+    /* Center using block-level and margin auto */
+    position: relative;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 .logout-link:hover {
     background: #6f6ff5;
     color: #fff;
 }
+
 
 
 /* Responsive adjustments */

@@ -83,6 +83,9 @@ $sql = "SELECT * FROM eoi WHERE $where ORDER BY $sort_field";
 $result = mysqli_query($conn, $sql);
 ?>
 
+<?php if (isset($_SESSION['manager_logged_in'])): ?>
+    <a href="logout.php" class="logout-link">Logout</a>
+<?php endif; ?>
 
 <body>
 <!--php include of the header -->
@@ -147,10 +150,6 @@ $result = mysqli_query($conn, $sql);
                     </form>
                 </td>
             </tr>
-
-            <?php if (isset($_SESSION['manager_logged_in'])): ?>
-                <a href="logout.php" class="logout-link">Logout</a>
-            <?php endif; ?>
 
             <?php endwhile; ?>
         </table>
