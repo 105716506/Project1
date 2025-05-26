@@ -1,9 +1,16 @@
+<head> <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="QuantumTech, Technology, Future, Website, Cloud, Engineer, FrontEnd, Developer, Data, Analyst, Jobs, Apply, Salary, Careers" />
+  <meta name="description" content="Welcome to QuantumTech - Innovating the Future">
+  <title>QuantumTech | Register</title> <!-- title of the website-->
+  <link href="Styles/Styles.css" rel="stylesheet"> <!-- References to external CSS files -->
+</head>
+
 <?php
 // Manager Registration Page
 session_start();
 include_once('settings.php'); // DB connection vars
 include 'header.inc'; 
-include 'nav.inc';
 
 // Feedback messages
 $errors = [];
