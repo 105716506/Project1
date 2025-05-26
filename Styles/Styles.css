@@ -481,6 +481,25 @@ ul.student-ids li {
     transform: scale(1.06);
 }
 
+.register-link {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 1em;
+    color: #393e46;
+}
+
+.register-link a {
+    color: #6f6ff5;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.17s;
+}
+
+.register-link a:hover {
+    color: #393e46;
+}
+
+
 /* Center main headings for dashboard */
 main h1, main h2 {
     text-align: center;

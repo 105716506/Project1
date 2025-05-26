@@ -92,8 +92,10 @@ if ($_SESSION['login_attempts'] >= 3) {
                 <input type="password" name="password" required>
             </label><br><br>
             <input type="submit" value="Login">
+
+            <p class="register-link">Not registered? <a href="register_manager.php">Register here</a></p>
         </form>
-        <p>Not registered? <a href="register_manager.php">Register here</a></p>
+        
     <?php endif; ?>
 </main>
 
