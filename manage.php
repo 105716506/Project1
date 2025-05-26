@@ -106,14 +106,14 @@ $result = mysqli_query($conn, $sql);
 
         <!-- Filter/Search Form -->
         <form class="manager-sort-form" method="get" action="manage.php">
-            <label>Job Reference: <input type="text" name="job_ref" /></label>
-            <label>First Name: <input type="text" name="first_name" /></label>
-            <label>Last Name: <input type="text" name="last_name" /></label>
+            <label>Job Reference: <input type="text" name="jobRef" /></label>
+            <label>First Name: <input type="text" name="firstName" /></label>
+            <label>Last Name: <input type="text" name="lastName" /></label>
             <label>Sort by:
                 <select name="sort_by">
                     <option value="EOInumber">EOI Number</option>
-                    <option value="first_name">First Name</option>
-                    <option value="last_name">Last Name</option>
+                    <option value="firstName">First Name</option>
+                    <option value="lastName">Last Name</option>
                     <option value="status">Status</option>
                 </select>
             </label>
@@ -136,9 +136,9 @@ $result = mysqli_query($conn, $sql);
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
             <tr>
                 <td><?= $row['EOInumber'] ?></td>
-                <td><?= $row['job_reference_number'] ?></td>
-                <td><?= $row['first_name'] ?></td>
-                <td><?= $row['last_name'] ?></td>
+                <td><?= $row['jobRef'] ?></td>
+                <td><?= $row['firstName'] ?></td>
+                <td><?= $row['lastName'] ?></td>
                 <td><?= $row['email'] ?></td>
                 <td><?= $row['phone'] ?></td>
                 <td><?= $row['status'] ?></td>
