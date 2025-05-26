@@ -41,6 +41,11 @@
           <p>🌎 Diverse and inclusive workplace culture</p>
       </section>
       
+      <sections class="enhancement">
+        <h1>Enhancements we used in our webpage</h1>
+        <a href="enhancement.php" class="btn">Click here to be enhance😉</a>
+      </sections>
+      
   </main>
 
 <!--php include of the footer -->
