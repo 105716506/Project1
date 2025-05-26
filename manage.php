@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head> <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="QuantumTech, Technology, Future, Website, Cloud, Engineer, FrontEnd, Developer, Data, Analyst, Jobs, Apply, Salary, Careers" />
-  <meta name="description" content="Welcome to QuantumTech - Innovating the Future">
-  <title>QuantumTech | Manage</title> <!-- title of the website-->
-  <link href="Styles/Styles.css" rel="stylesheet"> <!-- References to external CSS files -->
-</head>
-
-    <!--php include of the header -->
-<?php include 'header.inc';?>
-
-<body>
 <?php
 
 // Start a new or resume an existing session
@@ -89,65 +75,78 @@ $sql = "SELECT * FROM eoi WHERE $where ORDER BY $sort_field";
 $result = mysqli_query($conn, $sql);
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head> <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="QuantumTech, Technology, Future, Website, Cloud, Engineer, FrontEnd, Developer, Data, Analyst, Jobs, Apply, Salary, Careers" />
+  <meta name="description" content="Welcome to QuantumTech - Innovating the Future">
+  <title>QuantumTech | Manage</title> <!-- title of the website-->
+  <link href="Styles/Styles.css" rel="stylesheet"> <!-- References to external CSS files -->
+</head>
 
-<main>
-    <h2>Manage EOIs</h2>
+<body>
+<!--php include of the header -->
+<?php include 'header.inc';?>
+    <main>
+        <h2>Manage EOIs</h2>
 
-    <!-- Display any success or feedback messages -->
-    <p><?= $message ?></p>
+        <!-- Display any success or feedback messages -->
+        <p><?= $message ?></p>
 
-    <!-- Filter/Search Form -->
-    <form class="manager-sort-form" method="get" action="manage.php">
-        <label>Job Reference: <input type="text" name="job_ref" /></label>
-        <label>First Name: <input type="text" name="first_name" /></label>
-        <label>Last Name: <input type="text" name="last_name" /></label>
-        <label>Sort by:
-            <select name="sort_by">
-                <option value="EOInumber">EOI Number</option>
-                <option value="first_name">First Name</option>
-                <option value="last_name">Last Name</option>
-                <option value="status">Status</option>
-            </select>
-        </label>
-        <input type="submit" value="Filter / Sort">
-    </form>
+        <!-- Filter/Search Form -->
+        <form class="manager-sort-form" method="get" action="manage.php">
+            <label>Job Reference: <input type="text" name="job_ref" /></label>
+            <label>First Name: <input type="text" name="first_name" /></label>
+            <label>Last Name: <input type="text" name="last_name" /></label>
+            <label>Sort by:
+                <select name="sort_by">
+                    <option value="EOInumber">EOI Number</option>
+                    <option value="first_name">First Name</option>
+                    <option value="last_name">Last Name</option>
+                    <option value="status">Status</option>
+                </select>
+            </label>
+            <input type="submit" value="Filter / Sort">
+        </form>
 
-    <!-- Delete EOIs by Job Reference Form -->
-    <form class="manager-form" method="post" action="manage.php" onsubmit="return confirm('Are you sure you want to delete?');">
-        <label>Delete EOIs with Job Ref: <input type="text" name="delete_job_ref" required /></label>
-        <input type="submit" value="Delete">
-    </form>
+        <!-- Delete EOIs by Job Reference Form -->
+        <form class="manager-form" method="post" action="manage.php" onsubmit="return confirm('Are you sure you want to delete?');">
+            <label>Delete EOIs with Job Ref: <input type="text" name="delete_job_ref" required /></label>
+            <input type="submit" value="Delete">
+        </form>
 
-     <!-- Display EOIs in a table -->
-     <table class="manager-table" table border="1" cellpadding="5">
-        <tr>
-            <th>EOI#</th><th>Job Ref</th><th>First Name</th><th>Last Name</th>
-            <th>Email</th><th>Phone</th><th>Status</th><th>Update Status</th>
-        </tr>
-         <!-- Loop through each EOI and show in the table -->   
-         <?php while ($row = mysqli_fetch_assoc($result)): ?>
-        <tr>
-            <td><?= $row['EOInumber'] ?></td>
-            <td><?= $row['job_reference_number'] ?></td>
-            <td><?= $row['first_name'] ?></td>
-            <td><?= $row['last_name'] ?></td>
-            <td><?= $row['email'] ?></td>
-            <td><?= $row['phone'] ?></td>
-            <td><?= $row['status'] ?></td>
-            <td>
-                <!-- Form to update status of individual EOI -->
-                <form class="manager-form" method="post" action="manage.php">
-                    <input type="hidden" name="eoi_number" value="<?= $row['EOInumber'] ?>">
-                    <select name="new_status">
-                        <option value="New">New</option>
-                        <option value="Current">Current</option>
-                        <option value="Final">Final</option>
-                    </select>
-                    <input type="submit" name="update_status" value="Update">
-                </form>
-            </td>
-        </tr>
-        <?php endwhile; ?>
-    </table>
-</main>
+        <!-- Display EOIs in a table -->
+        <table class="manager-table" table border="1" cellpadding="5">
+            <tr>
+                <th>EOI#</th><th>Job Ref</th><th>First Name</th><th>Last Name</th>
+                <th>Email</th><th>Phone</th><th>Status</th><th>Update Status</th>
+            </tr>
+            <!-- Loop through each EOI and show in the table -->   
+            <?php while ($row = mysqli_fetch_assoc($result)): ?>
+            <tr>
+                <td><?= $row['EOInumber'] ?></td>
+                <td><?= $row['job_reference_number'] ?></td>
+                <td><?= $row['first_name'] ?></td>
+                <td><?= $row['last_name'] ?></td>
+                <td><?= $row['email'] ?></td>
+                <td><?= $row['phone'] ?></td>
+                <td><?= $row['status'] ?></td>
+                <td>
+                    <!-- Form to update status of individual EOI -->
+                    <form class="manager-form" method="post" action="manage.php">
+                        <input type="hidden" name="eoi_number" value="<?= $row['EOInumber'] ?>">
+                        <select name="new_status">
+                            <option value="New">New</option>
+                            <option value="Current">Current</option>
+                            <option value="Final">Final</option>
+                        </select>
+                        <input type="submit" name="update_status" value="Update">
+                    </form>
+                </td>
+            </tr>
+            <?php endwhile; ?>
+        </table>
+    </main>
 </body>
+</html>
