@@ -86,6 +86,13 @@ $result = mysqli_query($conn, $sql);
 <body>
 <!--php include of the header -->
 <?php include 'header.inc';?>
+
+<?php if (isset($_SESSION['manager_username'])): ?>
+    <div class="manager-username">
+        Logged in as: <span><?= htmlspecialchars($_SESSION['manager_username']); ?></span>
+    </div>
+<?php endif; ?>
+
     <main>
         <h2>Manage EOIs</h2>
 
@@ -153,7 +160,7 @@ $result = mysqli_query($conn, $sql);
         <?php if (isset($_SESSION['manager_logged_in'])): ?>
             <a href="logout.php" class="logout-link">Logout</a>
         <?php endif; ?>
-        
+
     </main>
 </body>
 </html>

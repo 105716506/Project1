@@ -511,6 +511,26 @@ main h1, main h2 {
     color: #fff;
 }
 
+.manager-username {
+    position: absolute;
+    top: 22px;           /* Adjust as needed */
+    right: 30px;         /* Adjust as needed */
+    font-size: 1.08em;
+    color: #253049;
+    background: #f8fbff;
+    border: 1px solid #e3e7f1;
+    border-radius: 16px;
+    padding: 0.5em 1.3em;
+    font-weight: 600;
+    z-index: 999;
+    box-shadow: 0 1px 5px rgba(120,136,164,0.06);
+}
+.manager-username span {
+    color: #6f6ff5;
+    font-weight: bold;
+}
+
+
 
 
 /* Responsive adjustments */
