@@ -88,10 +88,12 @@ $result = mysqli_query($conn, $sql);
 <?php include 'header.inc';?>
 
 <?php if (isset($_SESSION['manager_username'])): ?>
-    <div class="manager-username">
+    <div class="manager-badge">
         Logged in as: <span><?= htmlspecialchars($_SESSION['manager_username']); ?></span>
+        <a href="logout.php" class="logout-link-inline">Logout</a>
     </div>
 <?php endif; ?>
+
 
     <main>
         <h2>Manage EOIs</h2>
@@ -156,11 +158,6 @@ $result = mysqli_query($conn, $sql);
 
             <?php endwhile; ?>
         </table>
-
-        <?php if (isset($_SESSION['manager_logged_in'])): ?>
-            <a href="logout.php" class="logout-link">Logout</a>
-        <?php endif; ?>
-
     </main>
 </body>
 </html>
