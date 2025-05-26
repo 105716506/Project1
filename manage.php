@@ -117,7 +117,7 @@ $result = mysqli_query($conn, $sql);
         </form>
 
         <!-- Display EOIs in a table -->
-        <table class="manager-table" table border="1" cellpadding="5">
+        <table class="manager-table">
             <tr>
                 <th>EOI#</th><th>Job Ref</th><th>First Name</th><th>Last Name</th>
                 <th>Email</th><th>Phone</th><th>Status</th><th>Update Status</th>
