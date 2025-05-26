@@ -80,9 +80,9 @@ if ($_SESSION['login_attempts'] >= 3) {
     <h1>Manager Login</h1>
     <?php foreach ($errors as $e) echo "<p style='color:red;'>$e</p>"; ?>
     <?php if ($locked_out): ?>
-        <p style="color:red;">
+        <div class="error-message">
             Too many failed login attempts. Please wait <?php echo ceil($remaining / 60); ?> minutes before trying again.
-        </p>
+        </div>
     <?php else: ?>
         <form class="manager-form" method="post" action="login.php" autocomplete="off">
             <label>Username:
