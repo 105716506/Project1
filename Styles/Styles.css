@@ -513,8 +513,8 @@ main h1, main h2 {
 
 .manager-username {
     position: absolute;
-    top: 22px;           /* Adjust as needed */
-    right: 30px;         /* Adjust as needed */
+    top: 10px;           /* Adjust as needed */
+    right: 20px;         /* Adjust as needed */
     font-size: 1.08em;
     color: #253049;
     background: #f8fbff;
